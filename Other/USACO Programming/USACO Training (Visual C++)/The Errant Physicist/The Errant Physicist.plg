@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: The Errant Physicist - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "c:\windows\TEMP\RSPA341.TMP" with contents
+[
+/nologo /MLd /W4 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/The Errant Physicist.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Programming\Microsoft Visual Studio\MyProjects\USACO Training\The Errant Physicist\poly1.c"
+]
+Creating command line "cl.exe @c:\windows\TEMP\RSPA341.TMP" 
+Creating temporary file "c:\windows\TEMP\RSPA342.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/The Errant Physicist.pdb" /debug /machine:I386 /out:"Debug/The Errant Physicist.exe" /pdbtype:sept 
+".\Debug\poly1.obj"
+]
+Creating command line "link.exe @c:\windows\TEMP\RSPA342.TMP"
+<h3>Output Window</h3>
+Compiling...
+poly1.c
+c:\programming\microsoft visual studio\myprojects\usaco training\the errant physicist\poly1.c(241) : warning C4701: local variable 'term' may be used without having been initialized
+Linking...
+
+
+
+<h3>Results</h3>
+The Errant Physicist.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

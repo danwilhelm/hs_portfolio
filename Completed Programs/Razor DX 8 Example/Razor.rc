@@ -1,0 +1,138 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OLDRAZORINIT DIALOG DISCARDABLE  0, 0, 255, 93
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Razor 3D Engine Initializing..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Windowed",IDC_WINDOWED,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT | WS_GROUP | WS_TABSTOP,72,32,50,11
+    CONTROL         "Full-screen:",IDC_FULLSCREEN,"Button",
+                    BS_AUTORADIOBUTTON | BS_FLAT | WS_TABSTOP,137,32,52,10
+    DEFPUSHBUTTON   "Exit",IDCANCEL,205,54,50,14,BS_FLAT
+    DEFPUSHBUTTON   "Render!",IDOK,205,29,50,14,BS_FLAT
+    CTEXT           "1",IDC_RESTEXT,59,65,135,9,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    SCROLLBAR       IDC_VIDEORES,59,53,137,9
+    CONTROL         112,IDC_STATIC,"Static",SS_BITMAP,0,0,41,92
+END
+
+IDD_RAZORINIT DIALOG DISCARDABLE  0, 0, 255, 82
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Razor 3D Triangle Blitter Initializing..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "REF",IDC_REF,"Button",BS_AUTORADIOBUTTON | BS_FLAT | 
+                    WS_GROUP | WS_TABSTOP,3,63,48,11
+    CONTROL         "HAL",IDC_HAL,"Button",BS_AUTORADIOBUTTON | BS_FLAT | 
+                    WS_TABSTOP,3,48,42,12
+    CONTROL         "Windowed",IDC_WINDOWED,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT | WS_GROUP | WS_TABSTOP,53,48,50,11
+    CONTROL         "Full-screen",IDC_FULLSCREEN,"Button",BS_AUTORADIOBUTTON | 
+                    BS_FLAT | WS_TABSTOP,53,64,50,10
+    DEFPUSHBUTTON   "Run",IDOK,123,14,50,14,BS_FLAT
+    DEFPUSHBUTTON   "Exit",IDCANCEL,184,14,50,14,BS_FLAT
+    CTEXT           "1",IDC_RESTEXT,112,63,135,9,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    SCROLLBAR       IDC_VIDEORES,112,52,137,9
+    CONTROL         113,IDC_STATIC,"Static",SS_BITMAP,0,0,100,38
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+RazorVert               BITMAP  DISCARDABLE     "razor2.bmp"
+RazorHoriz              BITMAP  DISCARDABLE     "urazor.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    "IDD_OLDRAZORINIT", DIALOG
+    BEGIN
+        BOTTOMMARGIN, 90
+    END
+
+    "IDD_RAZORINIT", DIALOG
+    BEGIN
+        BOTTOMMARGIN, 81
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

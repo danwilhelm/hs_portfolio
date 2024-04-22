@@ -1,0 +1,100 @@
+Hello...                96-09-06
+
+Credits:  Code, etc...          Yamaha / XYZZ (Scott Scriven)
+
+This is my plasma.  Yay.  It's done with the most common plasma algorithm,
+which I call "swimming plasma".  The algorithm is pretty simple, though a
+bit memory- and processor-hungry.
+
+I didn't really think this code was very good, but I guess I'm releasing it
+anyway since I got a lot of requests for it.  Oh, well.
+
+Press <space> to change the palette.
+
+The plasma is 160x120 pixels, running in mode X.
+(text version is 80x50)
+
+
+---------------
+The source code
+---------------
+This source was made to compile on Turbo C 3.0, one of the worst compilers
+available (I had nothing better at the time, a year or two ago).  The source
+is very messy and I haven't bothered to clean it up at all, since I don't
+even have Turbo C any more.  Hopefully the code is self-explanatory, because
+there are almost no comments.  (and just ignore the commented-out sections)
+
+If you want to know how it works, it's probably much easier to read the
+rest of this file, instead of looking at the source.
+
+Only the main plasma c++ file is included, so you'll have to use your own
+versions of all gfx, text, and math stuff.
+
+
+-------------------
+Performance:  Speed
+-------------------
+On a 486/66 with a Diamond Speedstar Pro VLB video card, this plasma gets
+30 fps with retrace checking on, or around 35 fps otherwise (the resolution
+I use has a retrace rate of 60hz).  This is for PLASMA3.EXE, which uses
+four pages of plasma.  The two-page version, CHECKERX.EXE, gets 60 fps on
+the same 486, and around 70-80 without retrace checking.  The textmode
+version, PLASMAT.EXE, gets 70 fps with retrace checking, and I haven't even
+bothered to test it without retrace, since it runs at a decent speed even
+on the 286 I tried it on.
+
+Note that if I ever redo this in DJGPP (my current compiler), the speed will
+probably increase by 50% to 300%, just because it is a better compiler.
+Turbo C really sucks; and if you use it, I'd recommend getting something
+else if you want to make anything more than small utilities and simple
+graphics "toys".  (of course, the IDE is nice, but the compiler is bad)
+
+
+------------------------------
+Swimming Plasma:  How it works
+------------------------------
+Picture two transparent images on top of each other, as if on a clear,
+colored, sheet of plastic.  Move the images around on top of each other,
+and you can see both images moving independently.  However, the combination
+of images also produces interesting patterns.  This is how plasma works.
+
+With code, though, there is one more complication:  You've got to use only
+a *piece* of each image, or a "window" of the whole thing.  It's like you
+have a paper with a rectangle cut out of the middle; and you're moving the
+images *underneath* this opaque paper.  You can only see a "window" of
+each image, instead of the whole thing.
+
+Also, in code, you move the window rather than actually moving the image.
+
+All we do is this:
+        Make a nice, smooth, palette (like you would for a shadebob).
+        Precalculate some interesting images to lay on top of each other.
+                (sine patterns and fractal patterns work nicely)
+        Move a "window" smoothly each image, and add what you see in one
+                window to what is in the other windows.
+        Put this combined result onscreen each frame.
+
+With just two images, each individual image will probably be visible, and
+thus ruins the effect of the plasma.  If you use more than two images, the
+patterns are more complex and the individual images aren't really visible.
+So, I used four.  It seems to work.
+
+
+-----------
+Other Stuff
+-----------
+If you want an easy way to generate the correct types of palettes for
+plasma, and a possible way to generate plasma "page images", try my image
+editor, "Digital Artist".  It's on my web page.
+
+Yamaha / XYZZ
+email: scriven@CS.ColoState.edu
+http://www.CS.ColoState.edu/~scriven
+
+
+-----------
+Legal Stuff
+-----------
+Um, all of this (code, text, executables, data files, etc) is:
+Copyright (C) 1996 Scott Scriven.
+So, give me credit if you ever use it.
